@@ -6,9 +6,9 @@ Imports System.Text
 Module Program
     Sub Main(args As String())
 
-        Dim key As String = "9999ABCDE-1234-aB1cD-1234561631700831102"
+        Dim key As String = "smartkey"
         Dim method As String = "aes-256-ecb"
-        Dim data As String = "9999ABCDE-1234-aB1cD-1234561631700831102*********"
+        Dim data As String = "9999ABCDE-1234-aB1cD-12345616317008358611*********"
 
         key = LongKey(key, 32)
 
@@ -58,7 +58,7 @@ Module Program
     End Function
 
     ' If specified key is not a valid size 
-    ' Žw’è‚³‚ê‚½ƒL[‚ª—LŒø‚ÈƒTƒCƒY‚Å‚Í‚È‚¢ê‡
+    ' æŒ‡å®šã•ã‚ŒãŸã‚­ãƒ¼ãŒæœ‰åŠ¹ãªã‚µã‚¤ã‚ºã§ã¯ãªã„å ´åˆ
     Function LongKey(key As String, length As Integer) As String
         Dim keyBytes As Byte() = Encoding.UTF8.GetBytes(key)
         If keyBytes.Length >= length Then
